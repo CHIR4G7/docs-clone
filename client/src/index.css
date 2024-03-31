@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Madimi+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #477DC3;
+    font-family: "Inconsolata", monospace;;
+}
+.ql-container
+{
+
+}
+.ql-toolbar{
+    margin: 4px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    z-index: 3;
+}
+.ql-container{
+    left: 20%;
+    height: 11.7in;
+    width: 8.3in;
+    padding: 1in;
+    background-color: white;
+}
+
+@media print {
+    body{
+        background-color: white;
+    }
+    .ql-container{
+        height: 9in;
+        width: 6.5in;
+        left: 0;
+    }
+    .ql-toolbar{
+        display: none;
+    }
+}
+@media only screen and (max-width: 720px){
+    .ql-container{
+        height: 9in;
+        width: 6.5in;
+        left: 0;
+        padding: 0.25in;
+    }
+    .ql-toolbar{
+        position: fixed;
+        top: 0px;
+        z-index: 3;
+    }
+}
